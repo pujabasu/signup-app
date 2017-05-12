@@ -1,0 +1,24 @@
+
+<div class="login-control">
+  <div class="col-md-4 text-right">
+    <strong><i>Please enter your email:</i></strong>
+  </div>
+  <div class="col-md-8">
+    <input #user type="text" [ngClass]="{'error':validEmail}" (mouseout)="enableButton()" (keyup)="enableButton()" [(ngModel)]="userName" placeholder="user@example.com"/>
+    <div class="error-text" *ngIf="validEmail">
+      <img src="error-icon.png" alt="Error displaying the error icon"/>
+      {{validEmail}}
+    </div>
+  </div>
+</div>
+<div class="login-control">
+  <div class="col-md-4 text-right">
+    <strong><i>Please enter your password:</i></strong>
+  </div>
+  <div class="col-md-8">
+    <input #pwd type="password" (mouseout)="enableButton()" (keyup)="enableButton()" [(ngModel)]="password"/>
+  </div>
+</div>
+<div class="text-center">
+  <button class="btn btn-primary btn-lg"  (click)="submitResult()" [disabled]="isButtonDisable">Submit</button>
+</div>

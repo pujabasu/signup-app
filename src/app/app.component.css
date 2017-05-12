@@ -1,0 +1,16 @@
+.panel-heading, .panel-body {
+    padding: 0 15px;
+}
+
+header {
+    background: #54FF9F;
+    height: 55px;
+}
+
+/*section {
+    padding: 0 15px;
+}*/
+header > h1 {
+    margin: 0 ;
+    padding: 10px 0 0 20px;
+}

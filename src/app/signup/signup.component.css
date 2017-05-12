@@ -1,0 +1,21 @@
+.login-control > div {
+    padding-bottom: 20px;
+}
+
+.login-control div > input {
+    width: 50%;
+    border-radius: 5px;
+}
+
+.login-control:first-child > div:nth-child(2) > input,
+.login-control:first-child > div:nth-child(2) > div.error-text {
+    display: inline-block;
+}
+
+.error-text {
+    color: red;
+}
+
+.error {
+    border: 2px solid red;
+}
