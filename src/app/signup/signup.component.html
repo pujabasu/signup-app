@@ -6,7 +6,7 @@
   <div class="col-md-8">
     <input #user type="text" [ngClass]="{'error':validEmail}" (mouseout)="enableButton()" (keyup)="enableButton()" [(ngModel)]="userName" placeholder="user@example.com"/>
     <div class="error-text" *ngIf="validEmail">
-      <img src="./error-icon.png" alt="Error displaying the error icon"/>
+      <img src="./src/error-icon.png" alt="Error displaying the error icon"/>
       {{validEmail}}
     </div>
   </div>
