@@ -10,6 +10,7 @@ export class SignupComponent implements OnInit {
   userName: string;
   password: string;
   validEmail:string;
+  img='app/signup/error-icon.png';
   validEmailList=new Array(["gmail","yahoo"]);
  // validPwd: string;
   isButtonDisable:boolean=true;
