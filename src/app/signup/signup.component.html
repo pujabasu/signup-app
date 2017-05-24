@@ -4,21 +4,29 @@
     <strong><i>Please enter your email:</i></strong>
   </div>
   <div class="col-md-8">
-    <input #user type="text" [ngClass]="{'error':validEmail}" (mouseout)="enableButton()" (keyup)="enableButton()" [(ngModel)]="userName" placeholder="user@example.com"/>
-    <div class="error-text" *ngIf="validEmail">
-      <img [src]="img" alt="Error displaying the error icon"/>
-      {{validEmail}}
+    <input #user type="text" [ngClass]="{'error':!valid,'warning':emptyUserName}" (blur)="enableButton($event)"  
+    (keyup)="enableButton($event)" [(ngModel)]="userName" placeholder="user@example.com"/>
+    <div [ngClass]="{'error-text':!valid,'warning-text':emptyUserName}" *ngIf="!valid || emptyUserName">
+      <img *ngIf="!valid" [src]="img" alt="Error displaying the error icon"/>
+      <span *ngIf="emptyUserName" class="glyphicon glyphicon-exclamation-sign"></span>
+      <i>{{validEmail}}<a *ngIf="hyperlink" (click)="populateUserName()">{{hyperlink}}</a></i>
     </div>
-  </div>
+</div>
 </div>
 <div class="login-control">
   <div class="col-md-4 text-right">
     <strong><i>Please enter your password:</i></strong>
   </div>
   <div class="col-md-8">
-    <input #pwd type="password" (mouseout)="enableButton()" (keyup)="enableButton()" [(ngModel)]="password"/>
+    <input #pwd type="password"  (keyup)="enableButton($event)" [(ngModel)]="password"/>
+  </div>
+</div>
+<div class="login-control text-center">
+  <div>
+    <a href="#!">Forgot Password</a> |
+    <a href="#!">New Registration</a>
   </div>
 </div>
 <div class="text-center">
-  <button class="btn btn-primary btn-lg"  (click)="submitResult()" [disabled]="isButtonDisable">Submit</button>
+  <button class="btn btn-primary btn-lg"  [disabled]="isButtonDisable">Submit</button>
 </div>

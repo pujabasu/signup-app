@@ -8,7 +8,8 @@
 }
 
 .login-control:first-child > div:nth-child(2) > input,
-.login-control:first-child > div:nth-child(2) > div.error-text {
+.login-control:first-child > div:nth-child(2) > div.error-text,
+.login-control:first-child > div:nth-child(2) > div.warning-text {
     display: inline-block;
 }
 
@@ -16,6 +17,27 @@
     color: red;
 }
 
+.error-text  a {
+   cursor: pointer;
+}
+.warning-text {
+    color: orange;
+}
+
+span.glyphicon {
+    color: orange;
+}
+
 .error {
     border: 2px solid red;
+}
+
+.warning {
+    border: 2px solid orange;
+}
+
+.btn[disabled] {
+    background: #d0d0d0;
+    cursor: text;
+    border: none;
 }
