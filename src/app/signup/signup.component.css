@@ -1,5 +1,5 @@
 .login-control > div {
-    padding-bottom: 20px;
+    padding-bottom: 15px;
 }
 
 .login-control div > input {
@@ -35,18 +35,21 @@ span.glyphicon {
 .warning {
     border: 2px solid orange;
 }
-
 .btn[disabled] {
     background: #d0d0d0;
     cursor: text;
     border: none;
 }
 
+
 @media screen and (min-width: 991px) and (max-width: 1600px){
-    .login-control > div:first-child {
+    .login-control > div.right-aligned {
         text-align: right;
     }
-    .login-control:nth-child(3) > div {
+    .login-control:nth-child(3) > div > input {
+        width: auto;
+    }
+    .login-control > div.center-aligned {
         text-align: center;
     }
     .login-control:first-child > div:nth-child(2) > input,
@@ -56,36 +59,14 @@ span.glyphicon {
     }
 }
 
-/*@media screen and (min-width: 601px) and (max-width: 1268px){
-    .login-control div {
-        text-align: center;
-    }*/
-    /*.login-control > div:first-child {
-        text-align: right;
-    }
-    .login-control:nth-child(3) > div {
+@media screen and (min-width: 265px) and (max-width: 990px){
+    .login-control > div {
         text-align: center;
     }
-    .login-control:first-child > div:nth-child(2) > input,
-    .login-control:first-child > div:nth-child(2) > div.error-text,
-    .login-control:first-child > div:nth-child(2) > div.warning-text {
-        display: inline-block;
-    }*/
-/*}*/
-@media screen and (min-width: 320px) and (max-width: 990px){
-    .login-control div {
-        text-align: center;
+    .login-control:nth-child(3) > div > input {
+        width: auto;
     }
-
     .error-text,.warning-text {
         margin-top: 10px;
     }
-    /*.login-control:nth-child(3) > div {
-        text-align: center;
-    }*/
-    /*.login-control:first-child > div:nth-child(2) > input,
-    .login-control:first-child > div:nth-child(2) > div.error-text,
-    .login-control:first-child > div:nth-child(2) > div.warning-text {
-        display: inline-block;
-    }*/
 }

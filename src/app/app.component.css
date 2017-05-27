@@ -1,16 +1,78 @@
-.panel-heading, .panel-body {
+.panel-heading, .panel-body, footer {
+    padding: 0 15px;
+    border: 0;
+}
+
+.panel-heading {
+    margin: 0;
+    height: 50px;
+}
+
+.panel-heading > div {
+  background: -webkit-linear-gradient(left, #99ccff, #0073e6);
+  background: -moz-linear-gradient(left, #99ccff, #0073e6);
+  background: -o-linear-gradient(left, #99ccff, #0073e6);
+  background: linear-gradient(to right, #99ccff, #0073e6);
+  height: 100%;
+}
+
+.footer {
     padding: 0 15px;
 }
 
-header {
-    background: #54FF9F;
-    height: 55px;
+footer {
+    background: -webkit-linear-gradient(left, #99ccff, #0073e6);
+    background: -moz-linear-gradient(left, #99ccff, #0073e6);
+    background: -o-linear-gradient(left, #99ccff, #0073e6);
+    background: linear-gradient(to right, #99ccff, #0073e6);
+    /*font-size: 15px;*/
+    padding: 15px 0;
+    text-align: center;
 }
 
-/*section {
-    padding: 0 15px;
-}*/
-header > h1 {
-    margin: 0 ;
-    padding: 10px 0 0 20px;
+footer > div, footer > div > a {
+    color: white;
+}
+
+.panel-body > div {
+  padding-top: 30px;
+  height: 100%;
+  background: #f2f2f2;
+}
+section {
+    height: 100%;
+}
+
+section > div.panel-body {
+    height: 80%;
+}
+
+header > div, header > div > a {
+    display: inline-block;
+    color: white;
+}
+header >div:first-child {
+    font-size: 30px;
+    padding: 5px 0 0 50px;
+    font-family: cursive;
+}
+header > div:last-child {
+    padding: 15px 50px 0 0;
+    /*font-size: 15px;*/
+}
+
+@media screen and (min-width: 265px) and (max-width: 990px){
+    header > div:last-child {
+        display: none;
+    }
+
+    footer {
+        display: block;
+    }
+}
+
+@media screen and (min-width: 991px) and (max-width: 1600px){
+    footer {
+        display: none;
+    }
 }

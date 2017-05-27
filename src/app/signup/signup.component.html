@@ -1,7 +1,7 @@
 
 <div class="login-control">
-  <div class="col-md-4 col-sm-12">
-    <strong><i>Please enter your email:</i></strong>
+  <div class="col-md-4 col-sm-12 right-aligned">
+    <strong><i>UserName:</i></strong>
   </div>
   <div class="col-md-8 col-sm-12">
     <input #user type="text" [ngClass]="{'error':!valid,'warning':emptyUserName}" (blur)="enableButton($event)"  
@@ -14,15 +14,20 @@
   </div>
 </div>
 <div class="login-control">
-  <div class="col-md-4 col-sm-12">
-    <strong><i>Please enter your password:</i></strong>
+  <div class="col-md-4 col-sm-12 right-aligned">
+    <strong><i>Password:</i></strong>
   </div>
   <div class="col-md-8 col-sm-12">
     <input #pwd type="password"  (keyup)="enableButton($event)" [(ngModel)]="password"/>
   </div>
 </div>
+<div class="login-control col-sm-12 col-xs-12">
+  <div class="center-aligned">
+    <input type="checkbox"/> Keep me signed in
+  </div>
+</div>
 <div class="login-control">
-  <div>
+  <div class="center-aligned">
     <a href="#!">Forgot Password</a> |
     <a href="#!">New Registration</a>
   </div>
