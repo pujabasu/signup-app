@@ -7,4 +7,13 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'app works!';
+
+  calculateHeight(){
+    const height=window.innerHeight-100;
+    return height/window.innerHeight *100;
+  }
+
+  onResize(event) {
+    this.calculateHeight();
+  }
 }

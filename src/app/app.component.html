@@ -10,17 +10,15 @@
             </header>
         </div>
     </div>
-    <div class="panel panel-body">
+    <div class="panel panel-body" (window:resize)="onResize($event)" [style.height]="calculateHeight()+'%'">
         <div>
-         <app-signup></app-signup>
+            <app-signup></app-signup>
         </div>
     </div>
-    <div class="footer">
-        <footer>
-            <div>
-                <a href="#!">ABOUT US</a> |
-                <a href="#!">CONTACT</a>
-            </div>
-        </footer>
+    <div class="footer">       
+        <div>
+            <a href="#!">ABOUT US</a> |
+            <a href="#!">CONTACT</a>
+        </div>       
     </div>
 </section>

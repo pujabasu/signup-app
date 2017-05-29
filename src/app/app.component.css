@@ -47,9 +47,9 @@ section {
     height: 100%;
 }
 
-section > div.panel-body {
+/*section > div.panel-body {
     height: 80%;
-}
+}*/
 
 header > div, header > div > a {
     display: inline-block;
