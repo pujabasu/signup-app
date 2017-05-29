@@ -72,6 +72,9 @@ header > div:last-child {
 
     .footer {
         display: block;
+        position: absolute;
+        bottom: 0;
+        width: 100%;
     }
 
     .panel-body > div {
