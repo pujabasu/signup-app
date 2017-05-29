@@ -4,7 +4,7 @@
     <strong><i>UserName:</i></strong>
   </div>
   <div class="col-md-8 col-sm-12">
-    <input #user type="text" [ngClass]="{'error':!valid,'warning':emptyUserName}" (blur)="enableButton($event)"  
+    <input #user type="text" [ngClass]="{'error':!valid,'warning':emptyUserName}"  
     (keyup)="enableButton($event)" [(ngModel)]="userName" placeholder="user@example.com"/>
     <div [ngClass]="{'error-text':!valid,'warning-text':emptyUserName}" *ngIf="!valid || emptyUserName">
        <img *ngIf="!valid" [src]="img" alt="Error displaying the error icon"/>
@@ -33,5 +33,5 @@
   </div>
 </div>
 <div class="text-center">
-  <button class="btn btn-primary btn-lg"  [disabled]="isButtonDisable">Submit</button>
+  <button class="btn btn-primary btn-lg" (click)="checkIfUsernameIsValid()"  [disabled]="isButtonDisable">Submit</button>
 </div>
