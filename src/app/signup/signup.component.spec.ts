@@ -25,6 +25,17 @@ describe('SignupComponent', () => {
     component = fixture.componentInstance;
     fixture.detectChanges();
   });
+   it('Success scenario for empty username.', () => {
+    component.password="abc";
+    fixture.detectChanges();
+    component.enableButton();
+    fixture.detectChanges();
+    const de=fixture.debugElement.query(By.css('div.warning-text'));
+    const el=de.nativeElement;
+    //Username is empty but user is trying to enter password, so empty username
+    //warning message will be shown.
+    expect(el.textContent).toContain("UserName cannot be empty");
+  });
 
   it('Success scenario with valid email.', () => {
     component.userName="basupuja2007@gmail.com";

@@ -4,8 +4,8 @@
     <strong><i>UserName:</i></strong>
   </div>
   <div class="col-md-8 col-sm-12">
-    <input #user type="text" [ngClass]="{'error':!valid,'warning':emptyUserName}"  
-    (keyup)="enableButton($event)" [(ngModel)]="userName" placeholder="user@example.com"/>
+    <input #user type="text" [ngClass]="{'error':!valid,'warning':emptyUserName}"
+    (keyup)="enableButton()" [(ngModel)]="userName" placeholder="user@example.com"/>
     <div [ngClass]="{'error-text':!valid,'warning-text':emptyUserName}" *ngIf="!valid || emptyUserName">
        <img *ngIf="!valid" [src]="img" alt="Error displaying the error icon"/>
       <span *ngIf="emptyUserName" class="glyphicon glyphicon-exclamation-sign"></span>
@@ -18,7 +18,7 @@
     <strong><i>Password:</i></strong>
   </div>
   <div class="col-md-8 col-sm-12">
-    <input #pwd type="password"  (keyup)="enableButton($event)" [(ngModel)]="password"/>
+    <input #pwd type="password" (keyup)="enableButton()" [(ngModel)]="password"/>
   </div>
 </div>
 <div class="login-control col-sm-12 col-xs-12">
