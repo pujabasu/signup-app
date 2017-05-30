@@ -26,7 +26,7 @@ describe('SignupComponent', () => {
     fixture.detectChanges();
   });
    it('Success scenario for empty username.', () => {
-    component.password="abc";
+    component.password='abc';
     fixture.detectChanges();
     component.enableButton();
     fixture.detectChanges();
@@ -34,40 +34,40 @@ describe('SignupComponent', () => {
     const el=de.nativeElement;
     //Username is empty but user is trying to enter password, so empty username
     //warning message will be shown.
-    expect(el.textContent).toContain("UserName cannot be empty");
+    expect(el.textContent).toContain('UserName cannot be empty');
   });
 
   it('Success scenario with valid email.', () => {
-    component.userName="basupuja2007@gmail.com";
+    component.userName='basupuja2007@gmail.com';
     component.checkIfUsernameIsValid();
     //result returned will be valid for a valid username.
     expect(component.valid).toBeTruthy();
   });
   
   it('Success scenario with invalid email and user-friendly message.', () => {
-    component.userName="basupuja2007hmail.com";
+    component.userName='basupuja2007hmail.com';
     component.checkIfUsernameIsValid();
     //result returned will be invalid for an invalid username.
-    expect(component.validEmail).toEqual("UserName is incorrect");
+    expect(component.validEmail).toEqual('UserName is incorrect');
   });
   it('Failure scenario with invalid email.', () => {
-    component.userName="basupuja2007hmail.com";
+    component.userName='basupuja2007hmail.com';
     component.checkIfUsernameIsValid();
     //result returned will be invalid for an invalid username.
     expect(component.valid).toBeTruthy();
   });
   it('Success scenario with invalid email and a suggestion for a valid domain name.', () => {
-    component.userName="basupuja2007@nhoo.com";
+    component.userName='basupuja2007@nhoo.com';
     fixture.detectChanges();
     component.checkIfUsernameIsValid();
     fixture.detectChanges();
     const de=fixture.debugElement.query(By.css('div.error-text'));
     const el=de.nativeElement;
     //result returned will be valid for a valid username.
-    expect(el.textContent).toContain("Do you mean basupuja2007@yahoo.com");
+    expect(el.textContent).toContain('Do you mean basupuja2007@yahoo.com?');
   });
   it('Failure scenario with invalid email.', () => {
-    component.userName="basupuja2007@nhoo.com";
+    component.userName='basupuja2007@nhoo.com';
     component.checkIfUsernameIsValid();
     //result returned will be invalid for an invalid username with a suggestion to auto-correct.
     expect(component.valid).toBeTruthy();

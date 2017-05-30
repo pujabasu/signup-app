@@ -7,10 +7,10 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'app works!';
-
-  calculateHeight(){
-    const height=window.innerHeight-100;
-    return height/window.innerHeight *100;
+  // method to handle the size of the panel-body during window resize.
+  calculateHeight (){
+    const height= window.innerHeight - 100;
+    return height / window.innerHeight * 100;
   }
 
   onResize(event) {
