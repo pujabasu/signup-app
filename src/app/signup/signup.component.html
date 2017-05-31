@@ -9,7 +9,7 @@
     <div [ngClass]="{'error-text':!valid,'warning-text':emptyUserName}" *ngIf="!valid || emptyUserName">
        <img *ngIf="!valid" [src]="img" alt="Error displaying the error icon"/>
       <span *ngIf="emptyUserName" class="glyphicon glyphicon-exclamation-sign"></span>
-      <i>{{validEmail}}<a *ngIf="hyperlink" (click)="populateUserName()">{{hyperlink}}</a></i>
+      <i>{{validEmail}}<a *ngIf="hyperlink" (click)="populateUserName()">{{hyperlink}}?</a></i>
     </div>
   </div>
 </div>

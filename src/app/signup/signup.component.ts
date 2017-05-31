@@ -72,7 +72,7 @@ checkIfUsernameIsValid(){
     case 'Suggestion':
         this.valid=false;
         // setting the hyperlink to be displayed in case of auto-correction.
-        this.hyperlink=rtnObject.suggestedEmail + '?';
+        this.hyperlink=rtnObject.suggestedEmail;
         // setting the message to be displayed in case of incorrect username.
         this.validEmail='Do you mean '+ '';
         break;
