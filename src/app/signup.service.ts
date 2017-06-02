@@ -1,12 +1,11 @@
 import { Injectable } from '@angular/core';
+import {serviceData} from './signup.service.data';
 
 @Injectable()
 export class SignupService {
   tempUsr='';
-  // using a hardcoded array containing the domain names to be compared 
-  // with the domain names provided in username to check any typo and
-  // suggest the correct domain. In real app, this needs to fetched from DNS lookup.
-  validDomainList=new Array('gmail.com','yahoo.com','hotmail.com');
+  // Fetching the domain name from another file.
+  validDomainList = serviceData;
   constructor() { }
  // method to check the validity of the username provided.
   checkIfUsernameIsValid(userName: string):any{

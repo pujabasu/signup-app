@@ -39,4 +39,10 @@ describe('SignupService', () => {
     // invalid scenario but a suggestion will be returned for auto-correction.
     expect(rtnObj.result).toEqual('Valid');
   }));
+
+  it('Failure scenario with invalid username.', inject([SignupService], (service: SignupService) => {
+    const rtnObj= service.checkIfUsernameIsValid('user@swedn.gov.se');
+    // invalid scenario but a suggestion will be returned for auto-correction.
+    expect(rtnObj.result).toEqual('Valid');
+  }));
 });
