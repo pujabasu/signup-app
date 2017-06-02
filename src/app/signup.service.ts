@@ -1,11 +1,11 @@
 import { Injectable } from '@angular/core';
-import {serviceData} from './signup.service.data';
+import {SignUpData} from './signup-data';
 
 @Injectable()
 export class SignupService {
   tempUsr='';
-  // Fetching the domain name from another file.
-  validDomainList = serviceData;
+  // Call the fetchDomain function to get the domain names.
+  validDomainList: any= new SignUpData().fetchDomain();
   constructor() { }
  // method to check the validity of the username provided.
   checkIfUsernameIsValid(userName: string):any{
