@@ -7,12 +7,6 @@
     border-radius: 5px;
 }
 
-/*.login-control:first-child > div:nth-child(2) > input,
-.login-control:first-child > div:nth-child(2) > div.error-text,
-.login-control:first-child > div:nth-child(2) > div.warning-text {
-    display: inline-block;
-}*/
-
 .error-text {
     color: red;
 }

@@ -9,7 +9,11 @@
     <div [ngClass]="{'error-text':!valid,'warning-text':emptyUserName}" *ngIf="!valid || emptyUserName">
        <img *ngIf="!valid" [src]="img" alt="Error displaying the error icon"/>
       <span *ngIf="emptyUserName" class="glyphicon glyphicon-exclamation-sign"></span>
-      <i>{{validEmail}}<a *ngIf="hyperlink" (click)="populateUserName()">{{hyperlink}}?</a></i>
+      <i>{{message}}
+        <span *ngFor="let hyperlink of hyperlinks">
+            <a *ngIf="hyperlink" (click)="populateUserName(partialUserName+hyperlink.mail)">{{partialUserName+hyperlink.mail}}?</a>
+        </span>
+        </i>
     </div>
   </div>
 </div>
@@ -33,5 +37,5 @@
   </div>
 </div>
 <div class="text-center">
-  <button class="btn btn-primary btn-lg" (click)="checkIfUsernameIsValid()"  [disabled]="isButtonDisable">Submit</button>
+  <button class="btn btn-primary btn-lg"  [disabled]="isButtonDisable">Submit</button>
 </div>
