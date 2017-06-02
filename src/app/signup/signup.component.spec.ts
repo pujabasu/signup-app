@@ -69,7 +69,7 @@ describe('SignupComponent', () => {
     const de=fixture.debugElement.query(By.css('div.error-text'));
     const el=de.nativeElement;
     //result returned will be invalid for an invalid username with a suggestion to auto-correct.
-    expect(el.innerText.trim()).toEqual("Do you mean user@gmail.com? user@yahoo.com?");
+    expect(el.innerText.trim()).toEqual('Do you mean user@gmail.com? user@yahoo.com?');
   }));
   it('Success scenario of invalid email with suggestion for auto-correction.', inject([SignupService], (service:SignupService) => {
     component.ngOnInit();
@@ -79,6 +79,6 @@ describe('SignupComponent', () => {
     const de=fixture.debugElement.query(By.css('div.error-text'));
     const el=de.nativeElement;
     //result returned will be invalid for an invalid username with a suggestion to auto-correct.
-    expect(el.innerText.trim()).toEqual("Do you mean basupuja2007@yahoo.com?");
+    expect(el.innerText.trim()).toEqual('Do you mean basupuja2007@yahoo.com?');
   }));
 });

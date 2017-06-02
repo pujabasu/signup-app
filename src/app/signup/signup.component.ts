@@ -7,13 +7,13 @@ import {SignupService} from './../signup.service';
   styleUrls: ['./signup.component.css']
 })
 export class SignupComponent implements OnInit {
-  userName: string='';
-  password: string='';
-  message: string='';
+  userName: string;
+  password: string;
+  message: string;
   valid = true;
   emptyUserName: boolean;
   img = require('./error-icon.png');
-  hyperlinks:any=null;
+  hyperlinks:any;
   isButtonDisable = true;
   timer;
  
