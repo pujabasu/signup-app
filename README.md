@@ -13,51 +13,57 @@ Download/ clone the project from the github repository:
 https://github.com/pujabasu/signup-app.git
 
 Open the project in an instance of Visual Studio/ Visual Studio Code and navigate to the project folder in command prompt and install the node_modules folder:
-
-### npm install.
+```bash
+ npm install.
+ ```
 
 For that Node needs to be installed first.
 
 # Building the Application
 
 To build the application use the command 
-
-### ng build
+```bash
+ ng build
+ ```
 
 in the command prompt.
 
 # Hosting the Application
-
-### ng serve
-
+```bash
+ ng serve
+```
 This will host the application locally in angular's default server port localhost:4200
 
 Open the Chrome in browser and go to
-### http://localhost:4200
+```bash
+http://localhost:4200
+```
 
 Check out the result by giving some valid/invalid usernames in the UserName textbox and check the error-message displayed.
 
 To view it globally, both browser and mobile can go to the site: 
-### https://pujabasu.github.io/signup-app/
-
+```bash
+https://pujabasu.github.io/signup-app/
+```
 in which the application is published through github.
 
 # Test the Application
 
 Inorder to test use
-
-### ng test 
-
+```bash
+ ng test 
+```
 This will list all the successful and failure tests and also launch the Karma in Chrome. Debug can be done by pressing the Debug button and the tests can also be viewed in the console. 
 
 # CLI commands used for generating the project
-
-### ng new Project_Name
-### ng g component Component_Name
-### ng g service Service_Name --spec (to generate the test file against the service class along with the service file generation)
-### ng serve
-### ng build
-### ng test
-### ng lint (for checking the lint errors)
-### ngh (for publishing the application after hosting the pages in github).
+```bash
+ng new Project_Name
+ng g component Component_Name
+ng g service Service_Name --spec (to generate the test file against the service class along with the service file generation)
+ng serve
+ng build
+ng test
+ng lint (for checking the lint errors)
+ngh (for publishing the application after hosting the pages in github).
+```
 
